@@ -16,10 +16,17 @@ export default {
 
   methods: {
     async test() {
-      const post = await axios.get(`/WeatherForecast`)
+      const post = await axios
+        .get(`https://localhost:44338/WeatherForecast`, {
+        })
+        .then((response) => response.data)
+        .catch((error) => {
+          console.log(error)
+        })
+
       console.log(post)
-      console.log(post.data)
-      this.text = post.data
+
+      this.text = post
     },
   },
 }
