@@ -16,8 +16,9 @@ export default {
 
   methods: {
     async test() {
+      console.log("here")
       const post = await axios
-        .get(`https://localhost:44338/WeatherForecast`, {
+        .get(`http://136.244.106.113:5000/WeatherForecast`, {
         })
         .then((response) => response.data)
         .catch((error) => {

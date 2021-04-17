@@ -35,8 +35,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: [
+        './assets/css/main.scss'
+    ]
+},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
