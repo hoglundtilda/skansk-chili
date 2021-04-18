@@ -5,7 +5,6 @@
     </div>
     <ul>
       <NuxtLink to="/">Hem</NuxtLink>
-      <NuxtLink to="/">Hem</NuxtLink>
       <NuxtLink to="/om">Om oss</NuxtLink>
       <NuxtLink to="/webbutik">Webbutik</NuxtLink>
       <NuxtLink to="/foretag">Företag</NuxtLink>

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { mapActions } from 'vuex'
 export default {
   data() {
     return {
@@ -19,18 +19,11 @@ export default {
   },
 
   methods: {
-    async getProducts() {
-      this.products = await axios
-        .get(`https://localhost:5001/api/Products`, {})
-        .then((response) => response.data)
-        .catch((error) => {
-          console.log(error)
-        })
-      console.log(this.products)
-    },
+    ...mapActions(['getProducts']),
+
   },
   mounted() {
-      this.getProducts()
+      this.products = this.getProducts()
   }
 }
 </script>
