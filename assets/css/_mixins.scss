@@ -1,0 +1,13 @@
+@mixin btn {
+  background: none;
+  border-radius: 50px;
+  padding: 8px 36px;
+  box-shadow: $shadow__btn-primary;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+@mixin input {
+  
+}

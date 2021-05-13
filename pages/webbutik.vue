@@ -2,9 +2,12 @@
   <div class="wrapper">
     <h1>Våra chili produkter</h1>
     <section class="products">
-      <Product v-for="product in products" :key="product.id" :product="product" />
+      <Product
+        v-for="product in products"
+        :key="product.id"
+        :product="product"
+      />
     </section>
-
     <button @click="getProducts">testt</button>
   </div>
 </template>
@@ -20,11 +23,10 @@ export default {
 
   methods: {
     ...mapActions(['getProducts']),
-
   },
   mounted() {
-      this.products = this.getProducts()
-  }
+    this.products = this.getProducts()
+  },
 }
 </script>
 
@@ -33,8 +35,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
-
- 
 
   .products {
     display: flex;
