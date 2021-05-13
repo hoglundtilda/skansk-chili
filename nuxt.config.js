@@ -23,7 +23,10 @@ export default {
   },
 
   env: {
-    // env fallback axios
+    baseUrl:
+      process.env.NODE_ENV === 'dev'
+        ? 'https://localhost:5001/api'
+        : 'ip'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
