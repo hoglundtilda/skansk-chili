@@ -3,7 +3,7 @@ import axios from 'axios'
 export default {
   async getProducts({ commit }, id) {
     const products = await axios
-      .get(`/api/Products`, {})
+      .get(`http://localhost:5000/api/Products`, {})
       .then((response) => response.data)
       .catch((error) => {
         console.log(error)
@@ -17,7 +17,7 @@ export default {
 
     const data = {name: "test chilli", quantity: 3, cost: 135, category: "Salsa"}
     const products = await axios
-      .post(`/api/Products`, {data})
+      .post(`http://localhost:5000/api/Products`, {data})
       .then((response) => response.data)
       .catch((error) => {
         console.log(error)
